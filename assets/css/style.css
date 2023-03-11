@@ -2,7 +2,12 @@
     --black: black;
     --white: white;
 }
-  
+
+*{
+    box-sizing: border-box;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -72,16 +77,17 @@ nav a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    margin-top: auto;
+    align-items: center;
+    width: 99%;
+    margin: 20px auto;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .section {
-    width: 95%;
     min-height: 100px;
     max-height: fit-content;
     margin-top: 80px;
-    border: 3px solid var(--black);
     background-color: var(--white);
 }
 
@@ -90,6 +96,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
     top: -40px;
     width: 95%;
     margin-left: 3%;
@@ -103,9 +110,33 @@ nav a {
     background-color: var(--white);
 }
 
-.box {
-    color:var(--black);
-    margin-top: 20px;
+
+.card {
+    box-sizing: border-box;
+    flex: 1 0 ;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    max-width: 50%;
+    background-color: var(--black);
+}
+
+.card header {
+    position:relative;
+    justify-content: center;
+    z-index: 0;
+    padding: 20px;
+    background-color: rgb(0, 0, 87);
+    color: var(--white);
+}
+
+.card img {
+    width: 100%;
+}
+
+img{
+    max-width: 100%;
 }
 
 .justify {
@@ -115,11 +146,13 @@ nav a {
     white-space: pre-wrap;
 }
 
+
 .float-left{
     float:left;
     margin: 0 25px 25px 25px;
     max-width: 25%;
 }
+
 footer {
     margin-top: 40px;
     display: flex;

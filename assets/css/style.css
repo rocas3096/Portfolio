@@ -113,7 +113,7 @@ nav a {
 
 .card {
     box-sizing: border-box;
-    flex: 1 0 ;
+    flex: 1;
     padding: 10px;
     text-align: center;
     border-style: solid;
@@ -150,7 +150,13 @@ img{
 .float-left{
     float:left;
     margin: 0 25px 25px 25px;
-    max-width: 25%;
+    max-width: 20%;
+    max-height: 20%;
+}
+.float-left1 {
+    float:left;
+    margin: 0 25px 25px 25px;
+    max-width: 100%;
 }
 
 footer {

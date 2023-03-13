@@ -14,7 +14,7 @@ To find this website, use this link. https://rocas3096.github.io/Portfolio/
 
 To review this repository, use this link. https://github.com/rocas3096/Portfolio
 
-![alt text](assets/images/screenshot.png)
+![Image of Oscar Zavala's deployed portfolio website](assets/images/Oscar Zavala (1).png)
 
 ## Credits
 

@@ -1,23 +1,30 @@
+/*(universal) resets styling of page to have 0 padding, margins and set box sizing for 
+all elements*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*resets styling for html text to 100%*/
 html{
     height: 100%;
 }
 
+/*resets styling for body elements to their full height, line height to 1 and main font
+family to sans-serif*/
 body {
     min-height: 100%;
     line-height: 1;
     font-size: sans-serif;
 }
 
+/*resets styling for headers to be 100% of their original size*/
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
 }
 
+/*removes any styling for unordered list elements created by default*/
 ul {
     list-style: none;
 }

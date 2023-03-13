@@ -1,13 +1,16 @@
+/*resuable color variables for the page*/
 :root {
     --black: black;
     --white: white;
 }
 
+/*(universal) sets box sizing for all elements*/
 *{
     box-sizing: border-box;
 }
 
-
+/*(element) sets the body to flex into a column whne size is reduced, sets font to sans-serif
+and sets line height to 1.3*/ 
 body {
     display: flex;
     flex-direction: column;
@@ -15,6 +18,9 @@ body {
     line-height: 1.3;
 }
 
+/*(element) sets header to fixed position so it'll float, places space between elements inside,
+makes sure it floats over all items on the page when you scroll down, sets position, makes the 
+header wrap when the page is reduced in size and sets color and background color of header*/
 header{
 position: fixed;
 display: flex;
@@ -30,22 +36,26 @@ background-color: var(--black);
 color: var(--white);
 }
 
+/*(element) sets font size of h1*/
 h1 {
     font-size: 200%;
 }
+
+/*(class) sets the styling for nav bar elements*/
 .navbar ul {
     display: flex;
     justify-content: space-between;
     min-width: 300px;
 }
 
+/*(class) sets the styling for nav bar text*/
 nav a {
     color: var(--white);
     font-weight: bold;
     text-decoration: none;
 }
 
-
+/*(class) sets styling for background image*/
 .background-image {
     height: 100vh;
     background: url(../images/Banner.jpg);
@@ -55,6 +65,7 @@ nav a {
     position: relative;
 }
 
+/*(class) sets styling for text on top of background image*/
 .background-text {
     text-align: center;
     position: absolute;
@@ -65,14 +76,17 @@ nav a {
     color: var(--white);
 }
 
+/*(class) sets font size for the title of the text in the backgroun image*/
 .background-title {
     font-size: 100px;
 }
 
+/*(class) sets the size for the subtitle text*/
 .background-subtitle {
     font-size: 35px;
 }
 
+/*(class) sets up a box for the rest of the webpage and sets the styling for it*/
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +98,7 @@ nav a {
     border-width: 2px;
 }
 
+/*(class) sets the styling for indivdual sections within the container*/
 .section {
     min-height: 100px;
     max-height: fit-content;
@@ -91,6 +106,7 @@ nav a {
     background-color: var(--white);
 }
 
+/*(ID) sets the rules for stlying the header text of each section within container*/
 #title {
     position: relative;
     display: flex;
@@ -110,7 +126,7 @@ nav a {
     background-color: var(--white);
 }
 
-
+/*(class)within the work section, sets styling for each flexbox*/
 .card {
     box-sizing: border-box;
     flex: 1;
@@ -122,6 +138,7 @@ nav a {
     background-color: var(--black);
 }
 
+/*(class) sets the rules for the header section of each flexbox*/
 .card header {
     position:relative;
     justify-content: center;
@@ -131,14 +148,19 @@ nav a {
     color: var(--white);
 }
 
+/*(class)sets the width of the images within the flexbox to 100% of their container*/
 .card img {
     width: 100%;
 }
 
+/*(element) sets the max width of an image to 100% of its container*/
 img{
     max-width: 100%;
 }
 
+/*(class) sets up a class which will remove margins, justify text, place a 10px padding around
+text and will preserve whitespace when neccesary. Text will also wrap when neccesary and on 
+line-breaks*/
 .justify {
     margin: 0;
     text-align: justify;
@@ -146,34 +168,43 @@ img{
     white-space: pre-wrap;
 }
 
-
+/*(class) sets a class to float elements to the left and sets their margins, height and width
+this was used for stlying the positoning of the containters within the work section*/
 .float-left{
     float:left;
     margin: 0 25px 25px 25px;
     max-width: 20%;
     max-height: 20%;
 }
+
+/*(class) class set up to position of the first work to be larger than the rest*/
 .float-left1 {
     float:left;
     margin: 0 25px 25px 25px;
     max-width: 100%;
 }
 
+/*class for the last image since it was longer than the other ones and needed unique styling*/
 .float-left2{
     float:left;
     margin: 0 25px 25px 25px;
     max-width: 20%;
     max-height: 15%;
 }
+
+/*class and psudeo class for the portfolio image-sets the dimmensions for the last image within
+the work section*/
 .card .portfolio-image {
     height: 350px;
     min-width: 350px;
 }
 
+/*(ID) within the contact section they set the styling for text in the unordered list to none*/
 #contact a {
     text-decoration: none;
 }
 
+/*(element) sets the styling for the footer*/
 footer {
     margin-top: 40px;
     display: flex;
@@ -184,6 +215,8 @@ footer {
     padding: 1%;
 }
 
+/*changes the size of text for the  background image title and subtitle when the screen is
+sized to anything less than 768px in width */
 @media screen and (max-width: 768px) {
     .background-title {
         font-size: 50px;

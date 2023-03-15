@@ -3,7 +3,7 @@
     --black: black;
     --white: white;
 }
-
+ 
 /*(universal) sets box sizing for all elements*/
 *{
     box-sizing: border-box;
@@ -102,12 +102,15 @@ nav a {
 .section {
     min-height: 100px;
     max-height: fit-content;
-    margin-top: 80px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: var(--white);
 }
 
-/*(ID) sets the rules for stlying the header text of each section within container*/
-#title {
+/*(class) sets the rules for stlying the header text of each section within container*/
+.title {
     position: relative;
     display: flex;
     justify-content: center;
@@ -128,14 +131,13 @@ nav a {
 
 /*(class)within the work section, sets styling for each flexbox*/
 .card {
+    display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     flex: 1;
-    padding: 10px;
     text-align: center;
-    border-style: solid;
-    border-width: 1px;
     max-width: 50%;
-    background-color: var(--black);
+   
 }
 
 /*(class) sets the rules for the header section of each flexbox*/
@@ -180,7 +182,7 @@ this was used for stlying the positoning of the containters within the work sect
 /*(class) class set up to position of the first work to be larger than the rest*/
 .float-left1 {
     float:left;
-    margin: 0 25px 25px 25px;
+    margin: 0 25px 25px 100px;
     max-width: 100%;
 }
 
@@ -189,14 +191,6 @@ this was used for stlying the positoning of the containters within the work sect
     float:left;
     margin: 0 25px 25px 25px;
     max-width: 20%;
-    max-height: 15%;
-}
-
-/*class and psudeo class for the portfolio image-sets the dimmensions for the last image within
-the work section*/
-.card .portfolio-image {
-    height: 350px;
-    min-width: 350px;
 }
 
 /*(ID) within the contact section they set the styling for text in the unordered list to none*/
@@ -215,8 +209,15 @@ footer {
     padding: 1%;
 }
 
-/*changes the size of text for the  background image title and subtitle when the screen is
-sized to anything less than 768px in width */
+/* Changes section margins for the main section within the body when screen is sized to anything less than 1024px in width*/
+@media screen and (max-width: 1024px) {
+    .section {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/*changes the size of text for the background image title, subtitle, and container margins in work section when the screen is sized to anything less than 768px in width */
 @media screen and (max-width: 768px) {
     .background-title {
         font-size: 50px;
@@ -224,5 +225,32 @@ sized to anything less than 768px in width */
     
     .background-subtitle {
         font-size: 17px;
+    }
+    .float-left1 {
+        margin: 0 25px 25px 25px;
+    }
+    .float-left {
+        margin: 0 20px 25px 20px;
+    }
+    .float-left2 {
+        margin: 0 0px 25px 10px;
+    }
+}
+
+/*changes the size of a specific container margin in work section when the screen is sized to anything less than 425px in width */
+@media screen and (max-width: 425px) {
+    .float-left2 {
+        margin: 0 0px 25px 20px;
+    }
+}
+
+/* Changes section margins for the main section within the body when screen is sized to anything less than 425px in width. Also changes the size of a specific container margin in work section when the screen is sized to anything less than 425px in width */
+@media screen and (max-width: 375px) {
+    .section {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .float-left2 {
+        margin: 0 0px 25px 0px;
     }
 }
